@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Criação de Personagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="creator">
+        <h1>Criação de Personagem</h1>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" placeholder="Digite sua idade">
+
+        <label for="cabelo">Escolha o estilo de cabelo:</label>
+        <select id="cabelo">
+            <option value="0">Curto</option>
+            <option value="1">Longo</option>
+            <option value="2">Careca</option>
+        </select>
+
+        <label for="olhos">Escolha a cor dos olhos:</label>
+        <select id="olhos">
+            <option value="1">Azul</option>
+            <option value="2">Verde</option>
+            <option value="3">Castanho</option>
+            <option value="4">Preto</option>
+        </select>
+
+        <label for="peso">Peso:</label>
+        <input type="range" id="peso" min="0" max="100" value="50">
+
+        <label for="altura">Altura:</label>
+        <input type="range" id="altura" min="150" max="210" value="170">
+
+        <button id="salvar">Criar Personagem</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

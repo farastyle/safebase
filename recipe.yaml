@@ -1,0 +1,39 @@
+name: SafeBase
+author: farastyle
+description: "Servidor RP customizado com foco em segurança e personalização."
+
+tasks:
+  # Baixar o repositório SafeBase do GitHub
+  - action: download_github
+    src: https://github.com/farastyle/safebase.git
+    ref: main
+    dest: ./resources/safebase
+
+  # Baixar o oxmysql para conexão com MySQL
+  - action: download_github
+    src: https://github.com/overextended/oxmysql
+    ref: main
+    dest: ./resources/[standalone]/oxmysql
+
+  # Configurar o banco de dados com o SQL do repositório
+  - action: query_database
+    file: ./resources/safebase/sql/safebase.sql
+
+  # Mover o arquivo de configuração do server.cfg para o diretório raiz
+  - action: move_path
+    src: ./resources/safebase/server.cfg
+    dest: ./server.cfg
+
+  # Mover o arquivo de compressão de dados para o diretório raiz
+  - action: move_path
+    src: ./resources/safebase/server_compression.cfg
+    dest: ./server_compression.cfg
+
+  # Mover o arquivo de permissões para o diretório raiz
+  - action: move_path
+    src: ./resources/safebase/permissions.cfg
+    dest: ./permissions.cfg
+
+  # Finalizar configuração e dar uma pausa
+  - action: waste_time
+    seconds: 10
