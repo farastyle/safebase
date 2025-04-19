@@ -1,5 +1,17 @@
 print("SafeBase Server Started")
+local MySQL = exports.oxmysql
 
+-- Make sure the MySQL export is available before using it
+if not MySQL then
+    print("Error: MySQL not initialized")
+else
+    print("MySQL successfully initialized")
+end
+
+-- Example of using MySQL
+MySQL.query("SELECT * FROM players", {}, function(result)
+    print("Players:", result)
+end)
 -- Função para registrar eventos de conexão de jogadores
 AddEventHandler('playerConnecting', function(playerName, setKickReason, deferrals)
     deferrals.defer()

@@ -2,7 +2,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Seu Nome'
+author 'fasatyle'
 description 'Sistema de Criação de Personagem Interativo'
 version '1.0.0'
 

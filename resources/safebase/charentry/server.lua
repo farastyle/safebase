@@ -1,4 +1,3 @@
-
 RegisterServerEvent('saveCharacterData')
 AddEventHandler('saveCharacterData', function(data)
     local _source = source

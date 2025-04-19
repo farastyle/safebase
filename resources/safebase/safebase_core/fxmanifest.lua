@@ -6,6 +6,7 @@ description 'SafeBase - Framework customizado para FiveM'
 
 -- Requisitos do recurso
 server_script {
+    'server/server.lua',
     'server/main.lua',
     'server/database.lua',  -- Arquivo do banco de dados
     'server/jobs.lua',
